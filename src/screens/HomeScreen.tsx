@@ -28,7 +28,7 @@ const HomeScreen = () => {
                 onChangeText={setEmail}
                 keyboardType="email-address"
             />
-            <Button color={lightTheme.accent} title="Join Waitlist" onPress={handleJoinWaitlist} />
+            <Button color={lightTheme.accent}  title="Join Waitlist" onPress={handleJoinWaitlist} />
         </View>
     );
 };
@@ -65,6 +65,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         marginBottom: 20,
         paddingHorizontal: 10,
+        borderRadius:12,
+        paddingVertical:8
     },
     button:{
         backgroundColor:lightTheme.accent

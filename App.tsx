@@ -13,12 +13,16 @@ import HomeScreen from './src/screens/HomeScreen';
 import AddScreen from './src/screens/AddScreen';
 import ShelfScreen from './src/screens/ShelfScreen';
 import { lightTheme } from './src/styles/theme';
+import { Text, View } from 'react-native';
+import Header from './src/components/Header';
 
 const Tab = createBottomTabNavigator();
 
 const App = () => {
     return (
-        <NavigationContainer>
+        <NavigationContainer
+        
+        >
             <Tab.Navigator
                 screenOptions={{
                     tabBarActiveTintColor: lightTheme.accent,
@@ -26,13 +30,15 @@ const App = () => {
                     tabBarStyle: {
                         backgroundColor: lightTheme.secondary,
                     },
+                    
                 }}
             >
                 <Tab.Screen
                     name="Home"
                     component={HomeScreen}
                     options={
-                      {tabBarIcon: ()=> <Icon name="home" color={lightTheme.primary} size={24}/> }
+                      {tabBarIcon: ()=> <Icon name="home" color={lightTheme.primary} size={24}/> ,header:()=><Header backgroundColor={lightTheme.primary} title='Home'></Header>}
+                      
                     }
                 />
                 <Tab.Screen
