@@ -45,7 +45,8 @@ const App = () => {
                     name="Add"
                     component={AddScreen}
                     options={
-                      {tabBarIcon:()=><Icon name='plus' color={lightTheme.primary} size={24} />}
+                      {tabBarIcon:()=><Icon name='plus' color={lightTheme.primary} size={24} />,
+                      header:()=><Header backgroundColor={lightTheme.primary} title='Add Book'></Header>}
                     }
                     
                 />
@@ -54,7 +55,8 @@ const App = () => {
                     component={ShelfScreen}
                     options={
                       {
-                        tabBarIcon:()=><Icon name="book" color={lightTheme.primary} size={24} />
+                        tabBarIcon:()=><Icon name="book" color={lightTheme.primary} size={24} />,
+                        header:()=><Header title='My Book Shelf' backgroundColor={lightTheme.primary} ></Header>
                       }
                     }
                 />
